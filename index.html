@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Servicio - Bytecomtec</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid #004a99; /* Color institucional sugerido */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .checkbox-item input {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #004a99;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Solicitud Formal de Servicio</h2>
+    <p class="subtitle">Bytecomtec - Seguridad y Tecnología de Vanguardia</p>
+
+    <form action="https://formsubmit.co/el/vupiwo" method="POST">
+        
+        <input type="hidden" name="_subject" value="Nueva Solicitud de Servicio Escolar - Bytecomtec">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://tu-usuario.github.io/tu-repo/agradecimiento.html">
+
+        <div class="form-group">
+            <label for="escuela">Nombre de la Institución Educativa / C.C.T.</label>
+            <input type="text" id="escuela" name="Institución" placeholder="Ej. Primaria Benito Juárez / 09DPR1234Z" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de Servicio Requerido:</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item"><input type="checkbox" name="Servicio" value="Diagnostico"> Diagnóstico</div>
+                <div class="checkbox-item"><input type="checkbox" name="Servicio" value="Mantenimiento"> Mantenimiento</div>
+                <div class="checkbox-item"><input type="checkbox" name="Servicio" value="Instalacion"> Instalación</div>
+                <div class="checkbox-item"><input type="checkbox" name="Servicio" value="Capacitacion"> Capacitación</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripción detallada de la necesidad:</label>
+            <textarea id="descripcion" name="Descripcion_Detallada" placeholder="Describa brevemente el problema o requerimiento..." required></textarea>
+        </div>
+
+        <div style="display: flex; gap: 20px;">
+            <div class="form-group" style="flex: 1;">
+                <label for="fecha">Fecha preferente:</label>
+                <input type="date" id="fecha" name="Fecha_Sugerida">
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label for="horario">Horario preferente:</label>
+                <select id="horario" name="Horario_Sugerido">
+                    <option value="Matutino">Matutino (8:00 - 12:00)</option>
+                    <option value="Vespertino">Vespertino (14:00 - 18:00)</option>
+                </select>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+        <div class="form-group">
+            <label for="solicitante">Nombre del Solicitante y Cargo:</label>
+            <input type="text" id="solicitante" name="Nombre_Solicitante" placeholder="Ej. Prof. Juan Pérez - Director" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico de contacto:</label>
+            <input type="email" id="email" name="Email_Contacto" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tel">Teléfono / WhatsApp:</label>
+            <input type="text" id="tel" name="Telefono" required>
+        </div>
+
+        <button type="submit">Enviar Solicitud Formal</button>
+
+        <p class="footer-note">
+            Al enviar este formulario, usted acepta que Bytecomtec procese su solicitud para agendar una visita técnica oficial.
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
